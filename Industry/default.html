@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!--头部-->
+		<header class="navbar navbar-default">
+			<!--header是块级元素，占据整行-->
+			<div class="container">
+				<!--.contianer是固定宽度且居中-->
+				<!--汉堡包导航-->
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+						<!--.navbar-toggle的作用：
+						1、当设备屏幕宽度大于768像素时，隐藏汉堡包导航
+						2、设置相对定位
+						3、给button设置padding 让按钮变成汉堡包，宽度高度增加
+						4、让button中的span横线边长，宽度为22px，高度为2
+						5、让汉堡包导航中的火腿之间有距离-->
+						<!--在bootstrap中，所有的交互式通过自定义属性data-实现，不需要用户写js
+						data-toggle='collapse'   切换的方式是折叠
+						data-target="#id"    折叠的对象-->
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<!--导航部分-->
+				<div class="collapse navbar-collapse" id="menu">
+					<!--.navbar-collapse的作用：当设备宽度大于768的时候，水平导航显示 display:block !important-->
+					<!--.collapse的作用是隐藏导航条-->
+					<ul class="nav navbar-nav">
+						<!--导航条navbar中的导航先应用nav转化为导航，再使用navbar-nav类-->
+						<li><a href="#">首页</a></li>
+						<li><a href="#">关于我们</a></li>
+						<li><a href="#">服务介绍</a></li>
+						<li><a href="#">服务窗口</a></li>
+						<li><a href="#">价格中心</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<br>
+		<br>
+		<br>
+		<h1 style="color:aqua" id="cssTest">我是css方法测试用的</h1>
+	</body>
+	<script>
+	$('#cssTest').css({'background':'pink','font-size':'50px'});
+	$('#cssTest').css({'width':'200px','border':'1px solid #000'});
+
+	</script>
+</html>

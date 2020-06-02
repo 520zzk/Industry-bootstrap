@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/flexslider.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="css/jquery.flexslider-min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/animate.js"></script>
+		<style type="text/css">
+			header{
+				padding: 20px 0;
+				min-height:70px;
+				background: #fff !important;
+				/*!improtant提高到最高权重*/
+			}
+			@media only screen and (max-width:768px){
+				/*媒体查询:测试在移动端下是否有bug*/
+				header .navbar-collapse{
+					width:100%;
+					overflow:hidden;
+				}
+				/* .flexslider .flex-caption{
+					display: none;
+				} */
+			}
+			.flex-caption{
+				position: absolute;
+				top: 140px;
+				left: 460px;
+				color: #fff;
+			}
+			.flex-caption h3{
+				font-size: 40px;
+				font-weight: bold;
+				opacity: 0.7;
+				text-shadow: 5px 5px 10px rgba(255,0,0,0.3);
+				/* 水平偏移量，垂直偏移量，模糊半径，颜色 */
+			}
+			.myproduct p{
+				line-height: 1.8em;
+				margin-bottom: 10px;
+			}
+			.box{
+				border:1px solid #d4d4d4;
+			}
+			.box .iconfont{
+				font-size: 42px;
+				color: #e48907;
+				text-align: center;
+				display: block;
+			}
+			.box p{
+				line-height: 1.8em;
+				margin-bottom: 10px;
+				padding:0 8px;
+			}
+			.box h3{
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+			}
+			.box:hover{
+				background: #e48907;
+				color: #fff;
+			}
+			.box:hover .iconfont{
+				color: #fff;
+			}
+			.abouts img{
+				width:100%;
+			} 
+			.abouts{
+				margin:20px;
+			}
+			.abouts p{
+				line-height:1.8em;
+			}
+			footer{
+				background: #080808;
+				color:#949494;
+				padding:50px 0 0 0 ;
+			}
+			footer h3:hover,footer strong:hover,footer p:hover{
+				color:#C4E3F3;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!--区域一 头部-->
+		<header class="navbar navbar-default">
+			<div class="container">
+				<!--.contianer是固定宽度且居中-->
+				<!--汉堡包导航-->
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+						<!--.navbar-toggle的作用：
+						1.当设备屏幕宽度大于768px时，隐藏汉堡包导航
+						2.设置相对定位
+						3.给button设置padding，让按钮变成汉堡包，宽度高度增加
+						4.让button中的span横线边长，宽度为22px，高度为2
+						5.让汉堡包导航中的火腿之间有距离
+						在bootstrap中，所有的交互式通过自定义属性data-实现，不需要用户写js
+						data-toggle="collapse"  切换的方式是折叠
+						data-target="#id"  折叠的对象-->
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">
+						<img src="img/logo.png"/>
+					</a>
+				</div>
+				<!--导航-->
+				<div class="collapse navbar-collapse pull-right" id="menu">
+					<!--.navbar-collapse的作用：当设备宽度大于768px的时候，水平导航显示display:block !important-->
+					<!--.collapse的作用是隐藏导航条-->
+					<ul class="nav navbar-nav">
+						<!--导航条navbar中的导航先应用nav转化成导航，再使用navbar-nav类-->
+						<li><a href="#">首页</a></li>
+						<li class="dropdown">
+							<a href="#" data-toggle="dropdown">关于我们<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<!-- dropdown-menu的作用：绝对定位，同时设置不显示 -->
+								<li><a href="#">投资人</a></li>
+								<li><a href="#">管理团队</a></li>
+								<li><a href="#">专家团队</a></li>
+							</ul>
+						</li>
+						<li><a href="#">服务介绍</a></li>
+						<li><a href="#">服务窗口</a></li>
+						<li><a href="#">价格中心</a></li>
+						<li><a href="#">联系我们</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<!--区域二 轮播图 -->
+		<section id="banner">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="img/slides/1.jpg" >
+						<div class="flex-caption">
+							<h3>工业产品</h3>
+							<p>我们的产品介绍</p>
+						</div>
+					</li>
+					<li>
+						<img src="img/slides/2.jpg" >
+						<div class="flex-caption">
+							<h3>工业产2</h3>
+							<p>我们的产品介绍2</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<!--区域三 我们的产品 -->
+		<section class="myproduct">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>我们的产品</h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatibus repudiandae reprehenderit quam deserunt nemo rerum quibusdam excepturi eius delectus odit dolorem natus voluptas maiores sit aliquam nesciunt incidunt beatae.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--区域四 推荐产品 -->
+		<section class="hotproduct">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<div class="box">
+							<!-- 图标 -->
+							<span class="iconfont icon-chilunshezhi"></span>
+							<div class="box-area">
+								<h3>Chemical</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+								</p>
+								<p class="text-center">
+									<a href="#">更多信息...</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<!-- 图标 -->
+							<span class="iconfont icon-zuanshi"></span>
+							<div class="box-area">
+								<h3>Chemical</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+								</p>
+								<p class="text-center">
+									<a href="#">更多信息...</a>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<!-- 图标 -->
+							<span class="iconfont icon-renxiang"></span>
+							<div class="box-area">
+								<h3>Chemical</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+								</p>
+								<p class="text-center">
+									<a href="#">更多信息...</a>
+								</p>
+							</div>	
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="box">
+							<!-- 图标 -->
+							<span class="iconfont icon-fangzi"></span>
+							<div class="box-area">
+								<h3>Chemical</h3>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+								</p>
+								<p class="text-center">
+									<a href="#">更多信息...</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 区域五  关于我们 -->
+		<section class="abouts">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="./img/img1.png" >
+					</div>
+					<div class="col-md-6">
+						<h2>我们的团队</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- 区域六 脚部 -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3">
+						<h3>联系我们</h3>
+						<address>
+							<strong>武汉职业技术学院</strong>
+							<p>武汉市关山大道466号</p>
+						</address>
+					</div>
+					<div class="col-md-3">
+						<h3>联系我们</h3>
+						<address>
+							<strong>武汉职业技术学院</strong>
+							<p>武汉市关山大道466号</p>
+						</address>
+					</div>
+					<div class="col-md-3">
+						<h3>联系我们</h3>
+						<address>
+							<strong>武汉职业技术学院</strong>
+							<p>武汉市关山大道466号</p>
+						</address>
+					</div>
+					<div class="col-md-3">
+						<h3>联系我们</h3>
+						<address>
+							<strong>武汉职业技术学院</strong>
+							<p>武汉市关山大道466号</p>
+						</address>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<!--flexslider网址： https://www.helloweba.net/javascript/265.html -->
+	<script type="text/javascript">
+		$(function(){
+			$('.flexslider').flexslider();
+		})
+	</script>
+	<script>
+		$(function(){
+			$('.box').hover(function(){
+				$(this).find('.iconfont').addClass('animated fadeInDown');
+				$(this).find('p').addClass('animated fadeInUp');
+			},function(){
+				$(this).find('.iconfont').removeClass('animated fadeInDown');
+				$(this).find('p').removeClass('animated fadeInUp');
+			})
+		})
+	</script>
+</html>
+

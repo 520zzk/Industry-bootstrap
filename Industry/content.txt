@@ -1,0 +1,68 @@
+			头部最小高度70px 上下20px 白色底纹 导航右居中
+首页
+关于我们 
+服务介绍
+服务窗口
+价格中心
+联系我们
+
+	我们介绍
+	我们简介
+	我们历史
+
+
+/*轮播*/
+			文字定位 100 400  白色 透明0.6  30px 
+			标题35px 文字阴影 黄色
+化工业
+我们工业是最好的
+化工销售
+我们销售是最好的
+
+		
+
+/*我们的产品*/ mySuggest
+				行高1.8em
+标题 我们的产品
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptatibus repudiandae reprehenderit quam deserunt nemo rerum quibusdam excepturi eius delectus odit dolorem natus voluptas maiores sit aliquam nesciunt incidunt beatae.
+
+
+/*推荐产品*/
+
+span - icon-chilunshezhi
+	icon-zuanshi
+	icon-renxiang
+	icon-fangzhi
+
+		颜色 #e48907 大小40px 块级
+h3 	大小20px 加粗
+
+Chemical
+p	padding 
+Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Reprehenderit eos doloribus illum vero id natus non accusantium
+                             nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+
+鼠标移动上去动画，颜色改变 背景改变
+
+/*关于我们*/
+
+左右两栏 上下20间隔
+
+我们的团队
+
+p	1.8 em line-height
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit eos doloribus illum vero id natus non accusantium nihil perspiciatis explicabo molestias itaque ex recusandae omnis dolorum consectetur blanditiis corporis nemo.
+
+
+/*底部*/
+背景色 #080808  color #949494    上 50间隔
+
+移入    颜色 #C4E3F3
+
+
+
+联系我们
+武汉职业技术学院
+关山大道466号
